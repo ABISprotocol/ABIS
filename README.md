@@ -45,6 +45,9 @@ etc.
                         
 There are [numerous references in literature](http://scholar.google.com/scholar?rlz=1C1CHMO_en&espv=210&es_sm=93&um=1&ie=UTF-8&lr=&q=related:ogv2wsr8FCWLEM:scholar.google.com/) about this or related issues.  Core developers will, based on their experience, figure out what will work and what will not in evaluating how to implement the ABIS protocol.
 
+Project page:    http://abis.io
+Plan of Action:  https://gist.github.com/ABISprotocol/8515891
+
 
 
 
