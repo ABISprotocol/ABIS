@@ -42,7 +42,22 @@ Inter-system Specification for ABIS (Labor Day Weekend)
             payment protocols), any transaction at or above W (where W includes microdonation and fee) will trigger 
             a release of microdonations at preferences set by the user, wherever microdonations together are an amount less than W and greater than zero, for microdonations which are at amounts of X, Y, and Z [or X+Y+Z] as examples.
             
-        4.  Code Snippets, Suggestions for Implementation (To be published here on Sept. 1, 2014)
+        4.  Code Snippets, Suggestions for Implementation (Published on Sept. 1, 2014):
+            Note that these are initial suggestions intended to stimulate development discussion, 
+            and require vetting, refinement, and adjustment. These can thus be changed, used as the 
+            basis for a new issue or pull request, or simply used for general implementation discussion.
+            [Dependencies](https://github.com/amjuarez/bytecoin/blob/master/README)
+            Under [TxDustPolicy](https://github.com/amjuarez/bytecoin/blob/master/src/wallet/WalletSendTransactionContext.h) at dustThreshold, addToFee, addrForDust, change to store dust 
+            for incorporation into a future microdonation, and establish fee policy for microdonation.
+            Under [WalletUnconfirmedTransactions](https://github.com/amjuarez/bytecoin/blob/master/src/wallet/WalletUnconfirmedTransactions.cpp), establish and include pending microdonations in UnconfirmedTransactions,
+            and incorporate threshold count of W (see 2.a.3 above) as point where transfer of microdonations 
+            is initiated.
+            Under [WalletTransferDetails](https://github.com/amjuarez/bytecoin/blob/master/src/wallet/WalletTransferDetails.cpp), establish exception for unusedDust.push_back
+            Under [WalletUserTransactionsCache](https://github.com/amjuarez/bytecoin/blob/master/src/wallet/WalletUserTransactionsCache.cpp), establish method for storing of user preferences for W (see 2.a.3 above),
+            as well as user preferences for which addresses shall receive recurring microdonation at amount 
+            equal to user preference when W is met or exceeded.
+            Test in simplewallet CLI (intention is for eventual inclusion in an intuitive 'click-and-go' GUI
+            that saves user preferences within a simple but visually interesting BCN wallet).
         
     b.  Bitcoin / BTC
     
@@ -58,7 +73,16 @@ Inter-system Specification for ABIS (Labor Day Weekend)
             and confirmed at opportune times.  This may also incorporate elements that provide for specialized
             payment channels, including [aspects which allow for rapid and constant emissions of data](https://github.com/jgarzik/mcp).
             
-        3.  Code Snippets, Suggestions for Implementation (To be published here on Sept. 1, 2014)
+        3.  Code Snippets, Suggestions for Implementation (Published on Sept. 1, 2014):
+            Note that these are initial suggestions intended to stimulate development discussion, 
+            and require vetting, refinement, and adjustment. These can thus be changed, used as the 
+            basis for a new issue or pull request, or simply used for general implementation discussion.
+            [Building and Caching Dependencies](https://github.com/bitcoin/bitcoin/tree/master/depends)
+            [Core Integration and Staging](https://github.com/bitcoin/bitcoin)
+            [Install SX](https://github.com/spesmilo/sx/tree/master/tools), establish [custom address](https://github.com/spesmilo/sx/tree/master/tools#charity-donations)
+            for microdonation.
+            [Write shell scripts and test](https://github.com/spesmilo/sx/tree/master/tools#contribute) to establish ability to conduct
+            recurring transactions and user preferences for thresholds where microdonations will be broadcast.
         
     c.  Flowers in a Wasteland
     
@@ -78,7 +102,19 @@ Inter-system Specification for ABIS (Labor Day Weekend)
             This does not assume that humans are ultimately the fundamental basis for high-level 
             autonomic processes, but does provide for interaction between various types of organisms.
             
-        3.  Code Snippets, Suggestions for Interactions (To be published here on Sept. 1, 2014)
+        4.  Code Snippets, Suggestions for Interactions (Published Sept. 1, 2014):
+            Note that these are initial suggestions intended to stimulate development discussion, 
+            and require vetting, refinement, and adjustment. These can thus be changed, used as the 
+            basis for a new issue or pull request, or simply used for general implementation discussion.
+            [Build Ethereal (GUI) and Node (CLI)](https://github.com/ethereum/go-ethereum#build),
+            [Check releases](https://github.com/ethereum/go-ethereum/releases)
+            [Download and Compile pyethereum and serpent](https://blog.ethereum.org/2014/04/10/pyethereum-and-serpent-programming-guide/) or [tryethereum](https://github.com/ethereum/tryethereum)
+            [buildout and bootstrap](https://github.com/ethereum/pyethereum#buildout-optional)
+            Design and establish EAO [within the context of a DAC](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide/)
+            Determine hardware specifications (if contained within a mobile unit), develop and test a GUI 
+            for the EAO, establish protocols and business rules engine to establish boundaries of speciation.
+            
+            
 
 3.  Use Cases
 
@@ -135,6 +171,6 @@ Inter-system Specification for ABIS (Labor Day Weekend)
             c. Code which provides more than microdonations within a transactional framework, such as, but
                not limited to, [decentralized markets](https://github.com/OpenBazaar/OpenBazaar) that provide an opportunity to integrate decentralized giving preferences.
                
-    c.  Additional use cases with suggested code snippets to be published here on Sept. 1, 2014
+    c.  Additional use cases, examples of giving processes, and more, will be added here at a later date.
 
 
