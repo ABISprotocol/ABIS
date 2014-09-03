@@ -39,8 +39,12 @@ Inter-system Specification for ABIS (Labor Day Weekend)
         3.  Wallet system which enables recurring donations contingent upon user specification of threshold, 
             such that with threshold count of W (where W = a BCN amount that includes the amount of microdonation,
             and a fee, or a portion of fee for bundled microdonations which may be provided through an extension of
-            payment protocols), any transaction at or above W (where W includes microdonation and fee) will trigger 
-            a release of microdonations at preferences set by the user, wherever microdonations together are an amount less than W and greater than zero, for microdonations which are at amounts of X, Y, and Z [or X+Y+Z] as examples.
+            payment protocols), any transaction at or above W (where W includes microdonation and fee, and may also
+            include a transfer amount that is designated for a purchase where that amount to be transferred for
+            a purchase is distinct from any microdonation and corresponding microdonation fee amount) will trigger 
+            a release of microdonations at preferences set by the user, wherever microdonations together are an amount
+            less than W and greater than zero, for microdonations which are at amounts of X, Y, and Z [or X+Y+Z],
+            as examples.
             
         4.  Code Snippets, Suggestions for Implementation (Published on Sept. 1, 2014):
             Note that these are initial suggestions intended to stimulate development discussion, 
